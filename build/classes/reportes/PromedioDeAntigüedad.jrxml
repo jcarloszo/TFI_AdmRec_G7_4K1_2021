@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="proveedores" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e5bf1448-67f8-4a7d-bde5-a9a7ea55a928">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="Empleado" class="java.lang.String"/>
+	<field name="CUIT" class="java.lang.String"/>
+	<field name="Razon Social" class="java.lang.String"/>
+	<field name="Antigüedad Promedio de los equipos" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="120" y="30" width="434" height="45" uuid="d9adb57d-0964-476c-8c50-9787ae7e282c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Promedio de Antigüedad de Equipos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="70" height="19" uuid="3642bdef-e5e5-4b51-be24-06dde35946dd"/>
+				<textElement textAlignment="Right" verticalAlignment="Justified"/>
+				<text><![CDATA[Empleado:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="453" y="0" width="100" height="30" uuid="45bca5dd-faee-456b-8d13-3d57096f4fd5"/>
+				<textElement textAlignment="Right" verticalAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{Empleado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="20" uuid="0f9dae0d-e612-420c-9892-2a4beeb1f99c"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="50" y="0" width="100" height="20" uuid="55a67637-5089-4d8c-ab66-19654aec48f4"/>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image onErrorType="Blank">
+				<reportElement x="20" y="20" width="100" height="80" uuid="f6099915-9c6b-4866-824c-0ba17c26e92e"/>
+				<imageExpression><![CDATA["src/imagenes/logo pequeño.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="180" height="30" uuid="32f4367d-14e3-4010-9f61-37597e80a75e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[CUIT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="200" height="30" uuid="58dc10d9-d251-4e2b-8868-6f5375ee8b9f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Razon Social]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="380" y="0" width="174" height="30" uuid="491f60a3-d018-493c-ba89-2438afe0dde5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Antigüedad Promedio de los equipos]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<frame>
+				<reportElement mode="Transparent" x="0" y="0" width="554" height="30" forecolor="rgba(0, 0, 0, 0.3882353)" backcolor="rgba(10, 50, 194, 0.57254905)" uuid="89596b7e-971f-484b-be0c-5ecd649d57a6"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textField>
+					<reportElement x="0" y="0" width="180" height="30" uuid="9d4430e2-77cd-4477-999b-3a45412da87b">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="75bac384-8ae0-4d2e-b012-3ebc34017288"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{CUIT}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="180" y="0" width="200" height="30" uuid="765453ed-29b3-476a-8adb-c9ac5f87dfe4">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0761bea3-0394-46a6-b03c-7a8d87655e44"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{Razon Social}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="380" y="0" width="174" height="30" uuid="99fd53ca-5c66-43c7-af99-c04b92f53351">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="34f06a88-6665-4c15-a555-61da18db8f4c"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{Antigüedad Promedio de los equipos}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
